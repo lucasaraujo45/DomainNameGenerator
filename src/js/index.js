@@ -9,3 +9,19 @@ import "../style/index.scss";
 window.onload = function() {
   console.log("Hello Rigo from the console!");
 };
+
+function getRandomDomain(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+let pre = ["cool", "the", "crazy", "broken"];
+let com = [".com", ".net"];
+
+function randDomain() {
+  var domainName = document.getElementById("nme");
+  document.getElementById("domainMessage").innerHTML =
+    pre[getRandomDomain(0, pre.length)] +
+    domainName.value +
+    com[getRandomDomain(0, com.length)];
+}
+document.getElementById("submit").onclick = randDomain;
