@@ -18,10 +18,10 @@ let pre = ["cool", "the", "crazy", "broken"];
 let com = [".com", ".net"];
 
 function randDomain() {
-  var domainName = document.getElementById("nme");
-  document.getElementById("domainMessage").innerHTML =
+  var domainName = document.querySelector("#nme");
+  document.querySelector("#domainMessage").innerHTML =
     pre[getRandomDomain(0, pre.length)] +
     domainName.value +
     com[getRandomDomain(0, com.length)];
 }
-document.getElementById("submit").onclick = randDomain;
+document.querySelector("#submit").onclick = randDomain;
